@@ -24,6 +24,7 @@ const App = () => {
         <Route exact path='/products/:id' component={SingleProduct} />
         <Route exact path='/cart' component={Cart} />
         <Route exact path='/checkout' component={Checkout} />
+        <Route path='*' component={Error} />
       </Switch>
       <Footer />
     </Router>
