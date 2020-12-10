@@ -2,7 +2,7 @@ import React from "react";
 import AboutPageWrapper from "./AboutPageWrapper";
 
 const AboutPage = () => {
-  return <AboutPageWrapper></AboutPageWrapper>;
+  return <AboutPageWrapper>About</AboutPageWrapper>;
 };
 
 export default AboutPage;
