@@ -12,6 +12,7 @@ import ProductImages from "./ProductImages/ProductImages";
 import AddToCart from "./AddToCart/AddToCart";
 import Filters from "./Filters/Filters";
 import ProductList from "./ProductList/ProductList";
+import Product from "./Product/Product";
 import Sort from "./Sort/Sort";
 import Stars from "./Stars/Stars";
 import CartContent from "./CartContent/CartContent";
@@ -32,6 +33,7 @@ export {
   AddToCart,
   Filters,
   ProductList,
+  Product,
   Sort,
   Stars,
   CartContent,
