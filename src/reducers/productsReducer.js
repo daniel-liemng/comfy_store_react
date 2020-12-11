@@ -11,10 +11,24 @@ import {
 
 const productsReducer = (state, action) => {
   switch (action.type) {
+    // sidebar
     case SIDEBAR_OPEN:
       return { ...state, isSidebarOpen: true };
     case SIDEBAR_CLOSE:
       return { ...state, isSidebarOpen: false };
+    // products
+    case GET_PRODUCTS_BEGIN:
+      return { ...state, products_loading: true };
+    case GET_PRODUCTS_SUCCESS:
+      const featuredProducts = action.payload.filter((p) => p.featured);
+      return {
+        ...state,
+        products_loading: false,
+        products: action.payload,
+        featured_products: featuredProducts,
+      };
+    case GET_PRODUCTS_ERROR:
+      return { ...state, products_loading: false, products_error: true };
     default:
       return state;
   }
