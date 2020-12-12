@@ -12,10 +12,7 @@ import {
   GET_SINGLE_PRODUCT_ERROR,
   GET_SINGLE_PRODUCT_SUCCESS,
 } from "../actions";
-import {
-  products_url as url,
-  single_product_url as singleUrl,
-} from "../utils/constants";
+import { products_url as url } from "../utils/constants";
 
 const ProductsContext = createContext();
 
