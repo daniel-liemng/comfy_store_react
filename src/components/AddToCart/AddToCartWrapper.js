@@ -28,6 +28,7 @@ const AddToCartWrapper = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    outline: none;
     svg {
       font-size: 0.75rem;
       color: var(--clr-white);

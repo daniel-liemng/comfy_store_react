@@ -19,8 +19,6 @@ const Stars = ({ stars, reviews }) => {
     );
   });
 
-  console.log(tempStars);
-
   ///// ARRAY - DYNAMIC /////
   return (
     <StarsWrapper>
