@@ -28,6 +28,7 @@ const FiltersWrapper = styled.section`
     letter-spacing: var(--spacing);
     color: var(--clr-grey-5);
     cursor: pointer;
+    outline: none;
   }
   .active {
     border-color: var(--clr-grey-5);
