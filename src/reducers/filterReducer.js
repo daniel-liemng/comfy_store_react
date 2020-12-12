@@ -74,7 +74,6 @@ const filterReducer = (state, action) => {
 
       return { ...state, filters: { ...state.filters, [name]: value } };
     case FILTER_PRODUCTS:
-      console.log("fff");
       return { ...state };
     default:
       throw new Error(`No matching "${action.type}" - action type`);
