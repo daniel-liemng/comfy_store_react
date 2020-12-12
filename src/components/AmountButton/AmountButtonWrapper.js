@@ -19,9 +19,7 @@ const AmountButtonWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  h2 {
-    margin-bottom: 0;
+    outline: none;
   }
 `;
 
