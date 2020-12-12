@@ -23,6 +23,46 @@ const filterReducer = (state, action) => {
       return { ...state, grid_view: false };
     case UPDATE_SORT:
       return { ...state, sort: action.payload };
+    case SORT_PRODUCTS:
+      const sortType = state.sort;
+      let tempProducts = [...state.filtered_products];
+      if (sortType === "price-lowest") {
+        tempProducts = tempProducts.sort((a, b) => a.price - b.price);
+      }
+      if (sortType === "price-highest") {
+        tempProducts = tempProducts.sort((a, b) => b.price - a.price);
+      }
+      if (sortType === "name-a") {
+        tempProducts = tempProducts.sort((a, b) => {
+          // const nameA = a.name.toUpperCase();
+          // const nameB = b.name.toUpperCase();
+
+          // if (nameA < nameB) {
+          //   return -1;
+          // }
+
+          // return nameA < nameB ? -1 : null;
+          // return nameA < nameB ? -1 : 0;
+
+          return a.name.localeCompare(b.name);
+        });
+      }
+      if (sortType === "name-z") {
+        tempProducts = tempProducts.sort((a, b) => {
+          // const nameA = a.name.toUpperCase();
+          // const nameB = b.name.toUpperCase();
+
+          // if (nameA > nameB) {
+          //   return -1;
+          // }
+
+          // return nameA > nameB ? -1 : null;
+          // return nameA > nameB ? -1 : 0;
+
+          return b.name.localeCompare(a.name);
+        });
+      }
+      return { ...state, filtered_products: tempProducts };
     default:
       throw new Error(`No matching "${action.type}" - action type`);
   }
