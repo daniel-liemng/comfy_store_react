@@ -17,6 +17,8 @@ import Sort from "./Sort/Sort";
 import Stars from "./Stars/Stars";
 import CartContent from "./CartContent/CartContent";
 import PageHero from "./PageHero/PageHero";
+import GridView from "./GridView/GridView";
+import ListView from "./ListView/ListView";
 
 export {
   FeaturedProducts,
@@ -38,4 +40,6 @@ export {
   Stars,
   CartContent,
   PageHero,
+  GridView,
+  ListView,
 };

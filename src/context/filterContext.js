@@ -30,7 +30,7 @@ const FilterProvider = ({ children }) => {
   }, [products]);
 
   return (
-    <FilterContext.Provider value={{ filter: "Filters" }}>
+    <FilterContext.Provider value={{ ...state }}>
       {children}
     </FilterContext.Provider>
   );
