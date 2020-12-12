@@ -21,7 +21,7 @@ const ProductImagesWrapper = styled.section`
     }
   }
   .active {
-    border: 2px solid var(--clr-primary-5);
+    border: 3px solid var(--clr-primary-5);
   }
   @media (max-width: 576px) {
     .main {
