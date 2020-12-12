@@ -38,6 +38,7 @@ const FiltersWrapper = styled.section`
     border-radius: var(--radius);
     border-color: transparent;
     padding: 0.25rem;
+    outline: none;
   }
   .colors {
     display: flex;

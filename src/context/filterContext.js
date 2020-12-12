@@ -73,6 +73,8 @@ const FilterProvider = ({ children }) => {
       value = e.target.textContent;
     }
 
+    console.log("v", value);
+
     dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
   };
 
