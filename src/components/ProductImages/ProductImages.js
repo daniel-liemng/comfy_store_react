@@ -5,8 +5,6 @@ import ProductImagesWrapper from "./ProductImagesWrapper";
 const ProductImages = ({ images = [{ url: "" }] }) => {
   const [main, setMain] = useState(images[0]);
 
-  console.log(main);
-
   return (
     <ProductImagesWrapper>
       <img src={main.url} alt='main pic' className='main' />
