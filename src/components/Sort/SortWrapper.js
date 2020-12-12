@@ -54,6 +54,7 @@ const SortWrapper = styled.section`
     font-size: 1rem;
     text-transform: capitalize;
     padding: 0.25rem 0.5rem;
+    outline: none;
   }
   label {
     font-size: 1rem;
