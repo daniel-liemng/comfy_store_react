@@ -1,4 +1,5 @@
 import React, { useEffect, createContext, useContext, useReducer } from "react";
+
 import reducer from "../reducers/cartReducer.js";
 import {
   ADD_TO_CART,
@@ -8,15 +9,20 @@ import {
   COUNT_CART_TOTALS,
 } from "../actions";
 
-const initialState = {};
+const initialState = {
+  cart: [],
+  total_items: 0,
+  total_amount: 0,
+  shipping_fee: 534,
+};
 
 const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
-    <CartContext.Provider value={{ cart: "carts" }}>
-      {children}
-    </CartContext.Provider>
+    <CartContext.Provider value={{ ...state }}>{children}</CartContext.Provider>
   );
 };
 
