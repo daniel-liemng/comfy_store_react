@@ -68,9 +68,14 @@ const FilterProvider = ({ children }) => {
     let name = e.target.name;
     let value = e.target.value;
 
-    // Get value of Button
+    // Get text value of Button -> textContent
     if (name === "category") {
       value = e.target.textContent;
+    }
+
+    // Get color value of Button -> data-color & dataset.color
+    if (name === "color") {
+      value = e.target.dataset.color;
     }
 
     console.log("v", value);
