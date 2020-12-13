@@ -78,6 +78,14 @@ const FilterProvider = ({ children }) => {
       value = e.target.dataset.color;
     }
 
+    if (name === "price") {
+      value = Number(value);
+    }
+
+    if (name === "shipping") {
+      value = e.target.checked;
+    }
+
     console.log("v", value);
 
     dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
